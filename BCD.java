@@ -46,7 +46,25 @@ public class BCD extends Application{
 		}
 		
 		private void calcolo() {
+			String vettore[]= numero.getText().split("");
+			String risultato= "";
 			
+			dizionario.put("0", "0000");
+			dizionario.put("1", "0001");
+			dizionario.put("2", "0010");
+			dizionario.put("3", "0011");
+			dizionario.put("4", "0100");
+			dizionario.put("5", "0101");
+			dizionario.put("6", "0110");
+			dizionario.put("7", "0111");
+			dizionario.put("8", "1000");
+			dizionario.put("9", "1001");
+			
+			for(int i=0; i < vettore.length; i++) {
+				risultato += dizionario.get(vettore[i]);
+			}
+			
+			Lris.setText(risultato);
 		}
 		
 		public static void main(String[] args) {
